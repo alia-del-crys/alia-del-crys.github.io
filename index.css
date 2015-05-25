@@ -1,21 +1,34 @@
 .main, .segundo, .tercero  {
   width: 600px;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 
 ​*, body​ {
+  background-color: #F1C4EC;
   font-family: 'Maven Pro';
   font-weight: 400;
 }
-   
-h1,​ ​
-h2,​ ​
-h3,​ ​
-h4,​ ​
-h5,​ ​
-h6​ ​
-{
-  font-family: 'Merriweather';
-  font-weight: 700;​
+
+enlace {
+  text-align: center;
 }
+   
+h1,​ ​h2, h3, h4, h5, h6
+{
+  background-color: #F1B5EA;
+  font-family: 'Merriweather';
+  font-weight: 700;
+  text-align: center;​
+}
+
+
+h2
+{
+  background-color: #F4D3F0;
+  font-family: 'Merriweather';
+  font-weight: 700;
+  text-align: center;​
+}
+
+
