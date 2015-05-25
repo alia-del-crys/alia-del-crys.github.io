@@ -1,22 +1,21 @@
-#main {
+.main, .segundo, .tercero  {
   width: 600px;
   margin: 0 auto; 
 }
 
-#h1 {
-font : bold 1.8em Courier New, Courier;
-padding : 8px 0 4px 0;
-margin : 0;
-letter-spacing : -1px;
+
+​*, body​ {
+  font-family: 'Maven Pro';
+  font-weight: 400;
 }
-
-#h2 {
-font : bold 1.8em Courier New, Courier;
-letter-spacing : -1px;
-} 
-
-p {
-font :Courier New, Courier;
-font-size: 20px;
-letter-spacing: -1px;
+   
+h1,​ ​
+h2,​ ​
+h3,​ ​
+h4,​ ​
+h5,​ ​
+h6​ ​
+{
+  font-family: 'Merriweather';
+  font-weight: 700;​
 }
