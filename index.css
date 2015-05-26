@@ -4,13 +4,13 @@
 }
 
 
-​*, body​ {
+.body​ {
   background-color: #F1C4EC;
   font-family: 'Maven Pro';
   font-weight: 400;
 }
 
-enlace {
+.enlace {
   text-align: center;
 }
    
