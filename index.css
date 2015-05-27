@@ -3,9 +3,8 @@
   margin: 0 auto;
 }
 
-
-.body​ {
-  background-color: #F1C4EC;
+body​ {
+  background-image: url("degradado_de_color.jpeg");
   font-family: 'Maven Pro';
   font-weight: 400;
 }
