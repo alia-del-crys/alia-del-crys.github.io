@@ -1,29 +1,42 @@
 .main, .segundo, .tercero  {
-  width: 600px;
-  margin: 0 auto;
+  width: 60%;
+  margin: 10px auto;
+  position: relative;
+  @media screen and (min-width: 400px;)
 }
 
+
 body {
-  background-image: url("degradado_de_color.jpeg");
+ /* background-image: url("degradado_de_color.jpeg");*/
   font-family: 'Maven Pro';
   font-weight: 400;
+  padding-bottom: 100px;
 }
 
 .enlace {
   text-align: center;
 }
 
+
 h1, h2, h3, h4, h5, h6{
-  background-color: #F1B5EA;
+ /* background-color: #F1B5EA;*/
   font-family: 'Merriweather';
   font-weight: 700;
   text-align: center;
 }
 
 h2{
-  background-color: #F4D3F0;
+ /* background-color: #F4D3F0;*/
   font-family: 'Merriweather';
   font-weight: 700;
   text-align: center;
 }
 
+footer{
+  position: fixed;
+  bottom: 0;
+  left: ;
+  height: 70px;
+  background-color: white;
+  width: 100%;
+}
