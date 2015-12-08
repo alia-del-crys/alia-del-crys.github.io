@@ -1,0 +1,108 @@
+---
+layout: cv
+title: Rocio's resumé
+mail: rocio.fdez.diaz-meco@gmail.com
+about: |
+  Deeply interested in people and their interactions, I studied to be and
+  worked as a Psychologist. Later my personal passion for all technology things
+  opened new paths of professional and personal development. Now I grasp every
+  opportunity to build things that understand and help people.
+sections:
+  - name: experience
+    items:
+      - title: Software Developer Intern at We Are People Engineering
+        dates: June 2015 - Now
+        detail: |
+          Selected by the company for their intensive training program for
+          technical staff on Web development with Ruby on Rails ecosystem
+          technologies such as Haml, SCSS, Rake, Capistrano, Coffeescript...
+      - title: Junior Ruby Developer at LCIbérica
+        dates: July 2013 - March 2015
+        detail: |
+          Independent maintenance and development of Sinatra apps using Ruby
+          and SQL for report and official document generation and automatic
+          filling. Close-loop customer feedback for bug detection and
+          correction, and customised product evolution.
+      - title: Ruby Intern at LCIbérica.
+        dates: September 2012- October 2012
+        detail: |
+          Ruby and SQL integration for reporting automation, and official school paperwork generation
+      - title: Psychology Forensic Expert Witness (Family & Parole Court)
+        dates: February 2012 – June 2012
+        detail: |
+
+      - title: Community work & educational diagnostician – Assoc. Norte Joven
+        dates: October 2008 – June 2009
+        detail: |
+
+      - title: Psichologist & educational diagnostician – Programa ADRIS
+        dates: October 2008 – June 2009
+        detail: |
+
+      - title: Psychologist – IMMF’s International Adoption Center
+        dates: October 2006 – March 2007
+        detail: |
+
+      - title: Teacher at Asociación Helsinki.
+        dates:  October 2005 – May 2006
+        detail: |
+
+
+  - name: academic
+    icon: university
+    items:
+      - detail: Web Development with Ruby on Rails at Redradix (20 hours)
+      - detail: 2011 - Oracle DBA, ESF Group-Inem (150 hours)
+      - detail: 2009-2011 Forensic Specialist, Madrid Of. Psychologists Assoc. (276h theory / 100h practice)
+      - detail: Preparing official examinations for Penitentiary Technical Corps
+      - detail: June 2009 - Psychology Bachelor by Universidad Complutense de Madrid.
+  - name: skills
+    icon: wrench
+    items:
+      - detail: Git SCM, MySql/Oracle databases, VisualStudio & C#, Xml, Html/Haml/(S)CSS.
+      - detail: Software development with Ruby under Rails and Sinatra frameworks
+      - detail: Ubuntu, Debian and Windows user with Vagrant/Virtualbox virtualization experience
+      - detail: Advanced knowledge of MS Office y OpenOffice
+  - name: languages
+    icon: flag
+    items:
+      - detail: Upper Intermediate. Cambridge House
+      - detail: July 2011, Course intensive pre-intermediate. Cambridge House
+
+---
+
+<article id='resume'>
+    <h1>Rocío Fernández Díaz-Meco</h1>
+    <div id='contact'>
+      <a class='mail' href='mailto:{{page.mail}}'>{{ page.mail }}</a>
+      //
+      <span class='cell'>637 53 82 73</span>
+    </div>
+    <div id='about'>{{ page.about }}</div>
+  {% for section in page.sections %}
+    <section id={{ section.name }}>
+      <h2>{{ section.name | upcase }}</h2>
+        {% for item in section.items %}
+          <div class='item'>
+            {% if item.title != null %}
+              <span class='title'>
+              {% if item.dates != null %}
+                <span class='date'>{{ item.dates }}</span>
+              {% endif %}
+              {{ item.title }}
+              </span>
+            {% endif %}
+            <div class='detail'>
+              {% if item.title == null %}
+              <i class="fa fa-{% if section.icon %}{{ section.icon }}{% else %}check{% endif %}"></i>
+              &nbsp;
+              {% endif %}
+            {{ item.detail }}
+            </div>
+          </div>
+       {% endfor %}
+    </section>
+  {% else %}
+    There are no sections!
+  {% endfor %}
+</article>

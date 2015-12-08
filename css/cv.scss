@@ -1,0 +1,99 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+
+@import "bourbon/bourbon";
+@import "base/grid-settings";
+@import "neat/neat";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic|Lora:700,400italic);
+@import "base/base";
+
+
+
+// Our variables
+
+@media print {
+  body {
+    font-size: 10pt;
+  }
+}
+@media screen {
+  html {
+    background: $light-gray;
+    padding: 2em;
+    body {
+      width: 21cm;
+      height: 297mm;
+      padding: 1cm;
+      background: white;
+      margin: auto;
+      box-shadow: 1px 1px 10px #000;
+      font-size: 0.9em;
+    }
+  }
+}
+
+div.container {
+  @include outer-container;
+  article#resume{
+    padding: 1rem;
+    h1 {
+      text-align: center;
+      font-size: x-large;
+      margin-bottom: 1rem;
+    }
+    #contact {
+      text-align: center;
+      a {
+        text-decoration: underline;
+      }
+      .cell{ }
+      margin-bottom: 1rem;
+    }
+    #about {
+      font-family: $heading-font-family;
+      font-style: italic;
+      text-align: center;
+    
+    }
+    section {
+      h2 {
+        color: $dark-gray;
+        margin-top: 1rem;
+        border-bottom: 1px solid $light-gray;
+        text-align: right;
+      }
+      div.item {
+        //border: 1px dotted gray;
+        @include row();
+        .title {
+          margin-top: .5rem;
+          @include span-columns(12);
+          @include omega();
+          font-family: $heading-font-family;
+          font-weight: 700;
+          .date {
+            @include span-columns(4);
+            font-weight: 400;
+            font-style: italic;
+            margin-right: 1rem;
+          }
+        }
+        .detail {
+          font-size: .9rem;
+          @include span-columns(12);
+          @include omega();
+          display: block;
+        }
+        .title + .detail {
+          @include span-columns(11);
+          @include shift(1);
+          &::before { content: none; }
+
+        }
+      }
+    }
+  }
+}
