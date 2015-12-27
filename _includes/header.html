@@ -1,10 +1,18 @@
 <header>
-  <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+  <!--a href="{{ site.baseurl }}/">{{ site.title }}</a-->
   <nav>
-    {% for page in site.pages %}
-      {% if page.title %}
-        <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+    {% for p in site.pages %}
+      {% if p.url != page.url %}
+        {% if p.title %}
+          <a class='button' href="{{ p.url | prepend: site.baseurl }}">
+          {% if p.link_icon != null %}
+            <i class="fa fa-{{p.link_icon}}"></i>
+          {% endif %}
+          {{ p.link_text }}
+          </a>
+        {% endif %}
       {% endif %}
     {% endfor %}
   </nav>
 </header>
+
