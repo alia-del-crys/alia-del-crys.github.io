@@ -12,6 +12,71 @@
 
 // Our variables
 
+a {
+  i {
+    padding-right: .5em;
+  }
+}
+
 div.container {
   @include outer-container;
+  margin-top: 2em;
+  div.name {
+    h1 {
+      font-size: 2em;
+    }
+    
+    h2 {
+      font-size: 1.5em;
+    }
+    @include span-columns(8);
+  }
+  
+  div.photo{
+    @include span-columns(4);
+    @include omega();
+    img{
+      border: 3px solid white;
+      box-shadow: 0px 1px 3px rgba(0,0,0,0);
+      @include transform(rotate(2deg));
+      @include transition(transform 1s ease-in);
+    }
+  }
+  
+  div.content{
+    @include span-columns(12);
+    @include omega();
+    section{
+      h2 {
+      font-size: 1.5em;
+      }
+      padding-bottom: 2em;
+    }
+  }
 }
+
+header {
+  @include outer-container;
+  margin: 1em;
+  & > a{
+    display: block;
+    margin-left: 1em;
+    @include span-columns(10);
+  }
+}
+
+nav {
+  @include span-columns(10);
+  @include shift(1);
+  
+  a{
+    @include span-columns(3 of 10);
+  }
+}
+footer{
+  @include span-columns(10);
+  @include shift(1);
+  text-align: center;
+  background-color: $action-color;
+}
+
