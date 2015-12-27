@@ -5,12 +5,15 @@
   width: 60%;
   margin: 10px auto;
   position: relative;
-  @media screen and (min-width: 400px;)
+}
+
+@media screen and (min-width: 400px) {
+  // rules for narrow screens
 }
 
 
 body {
- /* background-image: url("degradado_de_color.jpeg");*/
+  // background-image: url("degradado_de_color.jpeg");
   font-family: 'Maven Pro';
   font-weight: 400;
   padding-bottom: 100px;
@@ -21,24 +24,24 @@ body {
 }
 
 
-h1, h2, h3, h4, h5, h6{
- /* background-color: #F1B5EA;*/
+h1, h2, h3, h4, h5, h6 {
+  // background-color: #F1B5EA;
   font-family: 'Merriweather';
   font-weight: 700;
   text-align: center;
 }
 
 h2{
- /* background-color: #F4D3F0;*/
+  // background-color: #F4D3F0;
   font-family: 'Merriweather';
   font-weight: 700;
   text-align: center;
 }
 
-footer{
+footer {
   position: fixed;
-  bottom: 0;
-  left: ;
+  bottom: 0px;
+  left: 0px;
   height: 70px;
   background-color: white;
   width: 100%;
